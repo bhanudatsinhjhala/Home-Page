@@ -27,31 +27,31 @@ body{
 /* Navbar CSS Code --start */
 
 
-.navbar_group{
+.navbar__group{
     position: sticky;
     top:0;
     z-index: 2;
 }
 
-.navbar_status{
+.navbar__status{
     background-color: var(--purple);
     height: 1.8rem;
     color: var(--white);
 }
 
-.nav_list{
+.nav__list{
     list-style-type: none;
 }
 
 
-.nav_list_status > li {
+.nav__list__status > li {
     margin-top: 2px;
     margin-left: 1rem;
     margin-right: 1.5rem;
     float:right;
     font-size: 0.9rem;
 }
-.nav_list > li > a{
+.nav__list > li > a{
     color: inherit;
     text-decoration: none;
 }
@@ -66,30 +66,30 @@ body{
 select option{
     background-color: var(--purple);
 }
-.nav_list_status > li:nth-child(2)::after, .nav_list_action_btn > li:nth-child(1)::after{
+.nav__list__status > li:nth-child(2)::after, .nav__list__action__btn > li:nth-child(1)::after{
     content: "|";
     padding-left: 1.5rem;
     font-size: 1.2rem;
 }
-.navbar_main{
+.navbar__main{
     background-color: var(--greyBack);
 }
-.navbar_main > .container{
+.navbar__main > .container{
     display: flex;
     justify-content: space-between;
 }
 
-.nav_list_action_btn_group{
+.nav__list__action__btn__group{
     position: relative;
     bottom: 5px;
     height: inherit;
 }
 
-.nav_list_action_btn > li:nth-child(2), .nav_list_action_btn > li:nth-child(4){
+.nav__list__action__btn > li:nth-child(2), .nav__list__action__btn > li:nth-child(4){
     display: none;
 }
 
-.nav_list_main, .nav_list_action_btn{
+.nav__list__main, .nav__list__action__btn{
     padding: 1rem 0.5rem;
     width: fit-content;
     display: flex;
@@ -97,56 +97,56 @@ select option{
     align-items: center;
 }
 
-.nav_list_action_btn{
+.nav__list__action__btn{
     flex-grow: 1;
     margin-right: 1.5rem;
     padding:0;
     height: 100%;
 }
 
-.nav_list_main{
+.nav__list__main{
     flex-grow: 8;
     width: auto;
 }
 
-.nav_list_main > li{
+.nav__list__main > li{
     margin: auto 0.5rem;
     color: var(--greytext);
 }
 
-.nav_list_main_group{
+.nav__list__main__group{
     width: 68%;
 }
-.nav_list_action_btn > li{
+.nav__list__action__btn > li{
     position: relative;
     bottom: 2px;
     float: right;
     color: var(--greytext);
 }
 
-.nav_list_action_btn > li:nth-child(1){
+.nav__list__action__btn > li:nth-child(1){
     margin-right: 1.5rem;
 }
 
-.shopping_cart_icon, .login_icon{
+.shopping__cart__icon, .login__icon{
     margin-left: 5px;
     color: var(--greytext);
     position: relative;
     top: 6px;
 }
 
-.nav_list_action_btn > li:nth-child(1) > p{
+.nav__list__action__btn > li:nth-child(1) > p{
     display: inline;
 }
 
 
-.search_input{
+.search__input{
     border: none;
     height: 16.2px;
     width: 90%;
     background-color: var(--white);    
 }
-.search_input:focus, #locationDropdown:focus{
+.search__input:focus, #locationDropdown:focus{
         outline: none;
 }
 #locationDropdown{
@@ -160,7 +160,7 @@ select option{
     background-color: var(--white);
     color: inherit;
 }
-.search_btn{
+.search__btn{
     float: right;
     width: 20px;
     height: 19.5px;
@@ -169,7 +169,7 @@ select option{
     background-color: var(--white);
 }
 
-.location_btn{
+.location__btn{
     float: left;
     width: 20px;
     height: 20.5px;
@@ -178,22 +178,22 @@ select option{
 
 }
 
-.search_icon, .location_icon{
+.search__icon, .location__icon{
     font-size: 16px !important;
 }
 
-.search_box{
+.search__box{
     width: 40%;
 }
 
-.input_with_icon{
+.input__with__icon{
     border: 1px solid var(--greytext);
     border-radius: 5px;
     padding: 5px 5px;
     background-color: var(--white);
 }
 
-.nav_list_menu{
+.nav__list__menu{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -201,21 +201,21 @@ select option{
     padding-top: 0.5rem;
 }
 
-.nav_list_menu >li{
+.nav__list__menu >li{
     text-transform: uppercase;
     font-size: 0.9rem;
     margin-right: 0.5rem;
 }
 
 
-.navbar_menu{
+.navbar__menu{
     width: 100%;
     position: relative;
     overflow-x: auto;
     background-color: var(--pinkBack);
 }
 
-.expand_more_icon{
+.expand__more__icon{
     position: relative;
     top: 5px;
     font-size: 20px !important;
@@ -259,46 +259,46 @@ select option{
 /* media Queries for Laptop and max-width 1280 px */
 
 @media only screen and (max-width: 1279px){
-    .location_box{
+    .location__box{
         display: none;
     }
 
-    .search_box{
+    .search__box{
         width: 40%;
     }
-    .nav_list_menu{
+    .nav__list__menu{
         width: max-content;
         margin-left: 1rem;
     }
 
-    /* .nav_list_menu > li{
+    /* .nav__list__menu > li{
         width: max-content;
         margin: 0 10px;
     } */
 }
 @media only screen  and (max-width: 858px) and (min-width: 768px ) {
 
-    .nav_list_action_btn > li:nth-child(1)::after{
+    .nav__list__action__btn > li:nth-child(1)::after{
         padding-left: 0;
     }
 
-    .nav_list_action_btn > li:nth-child(1){
+    .nav__list__action__btn > li:nth-child(1){
         margin-right: 0px;
     }
 }
 
 @media only screen  and (max-width: 801px) and (min-width: 768px ) {
-    .search_btn{
+    .search__btn{
         position: relative;
         bottom:18px;
     }
-    .search_box{
+    .search__box{
         position: relative;
         top: 5px;
     }
 }
 @media only screen  and (max-width: 778px) and (min-width: 768px ) {
-    .search_btn{
+    .search__btn{
         position: relative;
         bottom: 16px;
     }
@@ -308,33 +308,33 @@ select option{
 /* media Queries for Mini-Tablet max-width 767 px */
 
 @media only screen and (max-width: 767px){
-    .navbar_status, .search_box{
+    .navbar__status, .search__box{
         display: none;
     }
 
-    .nav_list_main_div{
+    .nav__list__main__div{
         width: auto;
     }
 
-    .navbar_menu{
+    .navbar__menu{
         display: none;
     }
 
-    .nav_list_action_btn > li:nth-child(1), .nav_list_action_btn > li:nth-child(3){
+    .nav__list__action__btn > li:nth-child(1), .nav__list__action__btn > li:nth-child(3){
         display: none;
     }
-    .nav_list_action_btn > li:nth-child(2), .nav_list_action_btn > li:nth-child(4){
+    .nav__list__action__btn > li:nth-child(2), .nav__list__action__btn > li:nth-child(4){
         display:inline-block;
     }
-    .nav_list_action_btn > li:nth-child(2){
+    .nav__list__action__btn > li:nth-child(2){
         margin-right: 1.5rem;
     }
 
-    .gift_categories_list > div > p{
+    .gift__categories__list > div > p{
         display: none;
     }
 
-    .gift_categories_list > div{
+    .gift__categories__list > div{
         max-width: 50px;
         min-width: 0;
         height: 50px;
@@ -345,10 +345,10 @@ select option{
 /* media Queries for Mobile Max-width 425px */
 
 @media only screen and (max-width: 425px){
-    .navbar_top, .search_box{
+    .navbar__top, .search__box{
         display: none;
     }
-    .nav_list_action_btn > li:nth-child(2), .nav_list_action_btn > li:nth-child(4){
+    .nav__list__action__btn > li:nth-child(2), .nav__list__action__btn > li:nth-child(4){
         display:none;
     }
 }
