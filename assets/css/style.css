@@ -529,12 +529,19 @@ select option{
 
 .cakes-cards-container{
     display: flex;
-    justify-content: space-evenly;
-    margin-top: 1rem;
+    justify-content: space-between;
+    margin-top: 1rem;    
+    margin-left: 2rem;
+    flex: 1;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
 }
-
 .cake-card, .cake-variety-card{
-    width: calc((100%)/7);
+    flex: auto;
+    flex-shrink: 0;
+    max-width: 250px;
+    margin-right: 1rem;    
     background-color: var(--white);
     padding: 5px;
     padding-top: 1rem;
@@ -549,7 +556,9 @@ select option{
     margin-top: 1rem;
     border-bottom: 1px solid var(--greytext);
 }
-
+.cake-header{
+    margin-left: 1rem;
+}
 .cake-card-details > p{
     display: inline-block;
     margin-bottom: 1rem;
@@ -616,23 +625,26 @@ select option{
 }
 
 .cake-variety-card-group{
-    width: calc((100%)/12);
+    width: 100px;
 }
 
 .cake-variety-card{
     padding: 5px;
-    width: 100%;
+    max-width: 100px;
+    margin-right: none;
+    margin:auto;
 }
 .cake-variety-img-placeholer{
     margin: auto;
     width: 100%;
     aspect-ratio: 1/1;
     border-radius: 8px;
+    text-align: center;
     background-color: var(--greytext);
 }
 
 .cake-variety-name{
-    text-align: center;
+    text-align: left;
     padding: 5px;
     width: 100%;
 }
@@ -665,6 +677,15 @@ select option{
     background: #9e458f; 
   }
 
+  .cakes-cards-container{
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    /* for Chrome, Safari, and Opera */
+  }
+  .cakes-cards-container::-webkit-scrollbar {
+    display: none;
+    /* for Chrome, Safari, and Opera */
+  }
   /* Scrollbar custom css end  */
 
 @media only screen and (min-width: 1440px){
@@ -810,6 +831,20 @@ select option{
 
     .gift-categories-list >div >p{
         display: none;
+    }
+
+    .cakes-cards-container{
+        flex-direction: column;
+        text-align: center;
+        margin: auto;
+        margin-top: 1rem;
+        width: fit-content;
+    }
+    .cakes-variety-name{
+        text-align: center;
+    }
+    .cake-variety-header{
+        margin-left: 1rem;
     }
 }
 
