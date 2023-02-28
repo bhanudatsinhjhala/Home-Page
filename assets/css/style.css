@@ -239,12 +239,13 @@ select option{
 
 .footer-first{
     display:flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin: 1rem;
+    flex-wrap: wrap;
 }
 
 .footer-about >p{
-    max-width: 80%;
+    max-width: 250px;
     margin: 5px;
     margin-left: 1rem;
 }
@@ -256,6 +257,12 @@ select option{
 
 .social-logo > ul > li{
     display: inline-block;
+}
+
+.footer-about, .footer-contact, .footer-information , .footer-news-letter{
+    max-width: 250px;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
 }
 
 .contact-details-group{
@@ -278,7 +285,7 @@ select option{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 70%;
+    /* width: 70%; */
 } 
 .location-details > span{
     align-self: flex-start
@@ -540,6 +547,7 @@ select option{
 .cake-card, .cake-variety-card{
     flex: auto;
     flex-shrink: 0;
+    min-width: 200px;
     max-width: 250px;
     margin-right: 1rem;    
     background-color: var(--white);
@@ -547,9 +555,11 @@ select option{
     padding-top: 1rem;
     padding-bottom: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0px 0px 20px #00000014;
+    box-shadow: 9px -6px 13px 5px #00000014;
 }
-
+.cake-variety-card{
+    box-shadow: 7px 7px 9px 3px #00000014;
+}
 .cake-card-details-container{
     width: 90%;
     margin:auto;
@@ -630,7 +640,7 @@ select option{
 
 .cake-variety-card{
     padding: 5px;
-    max-width: 100px;
+    min-width: 80px;
     margin-right: none;
     margin:auto;
 }
@@ -834,14 +844,25 @@ select option{
     }
 
     .cakes-cards-container{
-        flex-direction: column;
-        text-align: center;
         margin: auto;
         margin-top: 1rem;
+        flex-wrap: wrap;
         width: fit-content;
+        justify-content: center;
     }
-    .cakes-variety-name{
+    .cake-variety-name{
         text-align: center;
+    }
+
+    .cake-variety-card-group{
+        margin: auto;
+        margin-bottom: 1rem;
+    }
+    .cake-variety-card{
+        margin-right:  1rem;
+    }
+    .cake-card{
+        margin-bottom: 1.5rem;
     }
     .cake-variety-header{
         margin-left: 1rem;
