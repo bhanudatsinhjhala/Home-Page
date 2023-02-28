@@ -854,8 +854,7 @@ select option{
         text-align: center;
     }
 
-    .cake-variety-card-group{
-        margin: auto;
+    .cake-variety-card-group{        
         margin-bottom: 1rem;
     }
     .cake-variety-card{
