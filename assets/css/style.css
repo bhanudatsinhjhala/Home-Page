@@ -179,7 +179,7 @@ select option{
 }
 
 .search__icon, .location__icon{
-    font-size: 16px !important;
+    font-size: 16px;
 }
 
 .search__box{
@@ -578,13 +578,17 @@ select option{
     color: var(--purple);
 }
 .cake-card-img-placeholder{
-    width: 90%;
+    width: 89%;
     aspect-ratio: 4 / 3;
-    background-color: rgb(201, 199, 199);
+    position: relative;
     margin: auto;
     border-radius: 7% 7% 9% 8% / 7% 7% 7% 7% ;
 }
 
+.add-to-cart-img{
+    width: 100%;
+    height: 100%;
+}
 .deliver-details{
     color: var(--greytext);
     float:right;
@@ -621,6 +625,9 @@ select option{
     border-radius: 50%;
     margin-right: 10px;
     padding: 5px;
+    position: absolute;
+    top: -5px;
+    right: -3px;
     margin-top: 10px;
 }
 
@@ -635,13 +642,13 @@ select option{
 }
 
 .cake-variety-card-group{
-    width: 100px;
+    width: 200px;
+    margin-right: 1.5rem;
 }
 
 .cake-variety-card{
     padding: 5px;
-    min-width: 80px;
-    margin-right: none;
+    min-width: 150px;
     margin:auto;
 }
 .cake-variety-img-placeholer{
@@ -650,11 +657,13 @@ select option{
     aspect-ratio: 1/1;
     border-radius: 8px;
     text-align: center;
-    background-color: var(--greytext);
 }
-
+.cakes-variety-img{
+    width: 100%;
+    height: 100%;
+}
 .cake-variety-name{
-    text-align: left;
+    text-align: center;
     padding: 5px;
     width: 100%;
 }
